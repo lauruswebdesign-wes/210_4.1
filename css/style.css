@@ -1,0 +1,190 @@
+/* Reset & Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, button, nav a {
+  font-family: "Oswald", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p, li, span {
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+
+/* 
+============================
+       HEADER 
+============================
+*/
+header {
+    color: white;
+    padding: 0 50px;
+    position: fixed;
+    left: 0px;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    box-sizing: border-box;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .fa-bars {
+    font-size: 24px;
+}
+
+/* 
+============================
+       NAV MENU 
+============================
+*/
+.nav {
+    background: black;
+    width: 275px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0px;
+    left: -275px;;
+    z-index: 20;
+    transition: left .4s ease;
+}
+
+.nav.slide-menu {
+    left: 0px;
+}
+
+/* 
+============================
+        HERO 
+============================
+*/
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/hero.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: 10% 40%;
+    position: relative;
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background: rgba(24, 0, 98, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: 1;
+}
+
+
+.hero-container {
+    color: white;
+    width: 70%;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.hero-container h1 {
+    font-size: 34px;
+    text-transform: uppercase;
+}
+
+
+.hero-container h2 {
+    font-size: 27px;
+    text-transform: capitalize;
+    margin: 20px 0;   
+}
+
+.hero-container button {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    width: 175px;
+    height: 35px;
+    border-radius: 100px;
+}
+
+
+/* 
+============================
+         MODAL
+============================
+*/
+.modal {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.9);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal.show-modal {
+    opacity: 1;
+    visibility: visible
+}
+
+.modal-container {
+    background: white;
+    width: 40%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+
+.modal-container input {
+    border-radius: 10px;
+    border: 1px solid black;
+    margin: 5px 0;
+    height: 20px;
+}
+
+.modal-container button {
+    width: 100px;
+    border-radius: 50px;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
